@@ -39,14 +39,15 @@
         [self scheduleUpdate];
         [self initSpiders];
         
+        //添加得分标签
         scoreLabel = [CCLabelBMFont labelWithString:@"0" fntFile:@"bitmapfont.fnt"];
         scoreLabel.position = CGPointMake(screenSize.width / 2, screenSize.height);
-        
         scoreLabel.anchorPoint = CGPointMake(0.5f, 1.0f);
-        
         [self addChild:scoreLabel z:-1];
-
+        
+        //播放背景音乐
         [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"blues.mp3" loop:YES];
+        //预加载检查到碰撞是播放的音乐
         [[SimpleAudioEngine sharedEngine] preloadEffect:@"alien-sfx.caf"];
         
         srandom(time(NULL));

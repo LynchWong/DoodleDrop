@@ -11,15 +11,15 @@
 
 @interface GameLayer : CCLayer {
     
-    CCSprite *player;
-    CGPoint playerVelocity;
+    CCSprite *player;//玩家精灵
+    CGPoint playerVelocity;//加速计
     
-    NSMutableArray *spiders;
-    float spiderMoveDuration;
-    int numSpidersMoved;
+    NSMutableArray *spiders;//蜘蛛精灵数组
+    float spiderMoveDuration;//蜘蛛移动的时间
+    int numSpidersMoved;//移动中的蜘蛛的个数
     
-    int score;
-    CCNode<CCLabelProtocol> *scoreLabel;
+    int score;//得分
+    CCNode<CCLabelProtocol> *scoreLabel;//得分标签
 }
 
 + (id)scene;
